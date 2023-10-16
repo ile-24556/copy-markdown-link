@@ -10,7 +10,6 @@
   },
 
   "page_action": {
-    "browser_style": true,
     "default_icon": {
       "48": "icons/border-48.png"
     },
