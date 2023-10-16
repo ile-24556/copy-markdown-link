@@ -19,5 +19,7 @@
     },
     "show_matches": [ "http://*/*", "https://*/*" ],
     "default_title": "Copy"
-  }
+  },
+
+  "permissions": [ "tabs" ]
 }
