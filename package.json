@@ -1,0 +1,11 @@
+{
+  "name": "copy-markdown-link",
+  "version": "1.0.0",
+  "description": "Copy the Markdown link of current page.",
+  "main": "background.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ile-24556",
+  "license": "MIT"
+}
