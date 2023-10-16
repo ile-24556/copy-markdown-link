@@ -7,5 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "ile-24556",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@types/firefox-webext-browser": "^111.0.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  }
 }
