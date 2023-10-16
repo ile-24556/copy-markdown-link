@@ -9,6 +9,10 @@
     "48": "icons/border-48.png"
   },
 
+  "background": {
+    "scripts": [ "dist/background.js" ]
+  },
+
   "page_action": {
     "default_icon": {
       "48": "icons/border-48.png"
