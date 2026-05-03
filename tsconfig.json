@@ -35,5 +35,7 @@
 
     /* Completeness */
     "skipLibCheck": true,
+
+    "types": ["firefox-webext-browser"],
   },
 }
