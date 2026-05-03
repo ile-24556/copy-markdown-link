@@ -3,7 +3,7 @@
   "name": "Copy Markdown link",
   "version": "0.1.0",
 
-  "description": "Copy current web page as a Markdown link.",
+  "description": "Copy the current page title and the URL as a Markdown link.",
 
   "icons": {
     "48": "icons/border-48.png"
