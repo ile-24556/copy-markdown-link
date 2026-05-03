@@ -10,16 +10,16 @@
   },
 
   "background": {
-    "scripts": [ "dist/background.js" ]
+    "scripts": ["dist/background.js"]
   },
 
   "page_action": {
     "default_icon": {
       "48": "icons/border-48.png"
     },
-    "show_matches": [ "http://*/*", "https://*/*" ],
+    "show_matches": ["http://*/*", "https://*/*"],
     "default_title": "Copy"
   },
 
-  "permissions": [ "tabs" ]
+  "permissions": ["tabs"]
 }
