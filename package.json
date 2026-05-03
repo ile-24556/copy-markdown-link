@@ -1,6 +1,6 @@
 {
   "name": "copy-markdown-link",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Copy the Markdown link of current page.",
   "main": "background.js",
   "scripts": {
