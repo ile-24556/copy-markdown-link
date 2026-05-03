@@ -12,6 +12,12 @@
   "background": {
     "scripts": ["dist/background.js"]
   },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["dist/content.js"]
+    }
+  ],
 
   "page_action": {
     "default_icon": {
