@@ -9,13 +9,8 @@
   },
   "author": "ile-24556",
   "license": "MIT",
-  "dependencies": {
-    "@types/firefox-webext-browser": "^111.0.2"
-  },
   "devDependencies": {
-    "typescript": "^5.2.2"
-  },
-  "volta": {
-    "node": "18.18.2"
+    "@types/firefox-webext-browser": "^143.0.0",
+    "typescript": "^6.0.3"
   }
 }
