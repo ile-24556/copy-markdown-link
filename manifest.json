@@ -6,7 +6,7 @@
   "description": "Copy the current page title and the URL as a Markdown link.",
 
   "icons": {
-    "48": "icons/border-48.png"
+    "48": "icons/icon-48.png"
   },
 
   "background": {
@@ -15,7 +15,7 @@
 
   "page_action": {
     "default_icon": {
-      "48": "icons/border-48.png"
+      "48": "icons/icon-48.png"
     },
     "show_matches": ["http://*/*", "https://*/*"],
     "default_title": "Copy"
