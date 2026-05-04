@@ -6,8 +6,9 @@ function extractCanonicalURL(): string | null {
   return element.href;
 }
 
-browser.runtime.onMessage.addListener((message, _sender, sendResponse) => {
+browser.runtime.onMessage.addListener((message: MessageReq, _sender, sendResponse) => {
   if (message.action === "extractCanonicalURL") {
-    sendResponse({ url: extractCanonicalURL() });
+    const response: MessageRes = { url: extractCanonicalURL() };
+    sendResponse(response);
   }
 });
