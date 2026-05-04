@@ -1,4 +1,8 @@
 browser.pageAction.onClicked.addListener(async (tab: browser.tabs.Tab) => {
+  await browser.scripting.executeScript({
+    files: ["dist/content.js"],
+    target: { tabId: tab.id! },
+  });
   const response = await browser.tabs.sendMessage(tab.id!, { action: "extractCanonicalURL" });
   const link = `[${tab.title}](${response.url || tab.url})`;
   await navigator.clipboard.writeText(link);
