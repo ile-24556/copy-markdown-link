@@ -3,6 +3,10 @@ browser.pageAction.onClicked.addListener(async (tab: browser.tabs.Tab) => {
     console.error("Tab ID is not available.");
     return;
   }
+  if (tab.url == null) {
+    console.error("Tab URL is not available.");
+    return;
+  }
 
   await browser.scripting.executeScript({
     files: ["dist/content.js"],
