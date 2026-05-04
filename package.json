@@ -4,13 +4,19 @@
   "description": "Copy the Markdown link of current page.",
   "main": "background.js",
   "scripts": {
+    "lint": "eslint src eslint.config.*",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "./node_modules/.bin/tsc"
   },
   "author": "ile-24556",
   "license": "MIT",
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@types/firefox-webext-browser": "^143.0.0",
-    "typescript": "^6.0.3"
+    "eslint": "^10.3.0",
+    "globals": "^17.6.0",
+    "jiti": "^2.6.1",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.59.1"
   }
 }

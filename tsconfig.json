@@ -38,4 +38,5 @@
 
     "types": ["firefox-webext-browser"],
   },
+  "exclude": ["eslint.config.mts"],
 }
