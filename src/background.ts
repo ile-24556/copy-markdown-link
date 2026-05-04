@@ -17,7 +17,9 @@ browser.pageAction.onClicked.addListener(async (tab: browser.tabs.Tab) => {
     target: { tabId: tab.id },
   });
   const response = await browser.tabs.sendMessage(tab.id, { action: "extractCanonicalURL" });
-  const link = `[${tab.title}](${response.url || tab.url})`;
+
+  const url = response.url ? `${response.url}${(new URL(tab.url).hash)}` : tab.url;
+  const link = `[${tab.title}](${url})`;
   await navigator.clipboard.writeText(link);
   console.log("Link has been copied:", link);
 });
