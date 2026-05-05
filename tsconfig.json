@@ -1,20 +1,20 @@
 {
   "compilerOptions": {
-    /* Language and Environment */
+    // Language and Environment
     "target": "es2024",
 
-    /* Modules */
+    // Modules
     "module": "commonjs",
     "rootDir": "./src",
 
-    /* Emit */
+    // Emit
     "outDir": "./dist",
 
-    /* Interop Constraints */
+    // Interop Constraints
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
 
-    /* Type Checking */
+    // Type Checking
     "strict": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
@@ -33,7 +33,7 @@
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
 
-    /* Completeness */
+    // Completeness
     "skipLibCheck": true,
 
     "types": ["firefox-webext-browser"],
