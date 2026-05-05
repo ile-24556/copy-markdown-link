@@ -4,7 +4,7 @@
   "description": "Copy the Markdown link of current page.",
   "main": "background.js",
   "scripts": {
-    "lint": "eslint src eslint.config.*",
+    "lint": "dprint check && eslint src eslint.config.* && web-ext lint",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc"
   },
