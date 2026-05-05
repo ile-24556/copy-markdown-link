@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "dprint check && eslint src eslint.config.* && web-ext lint",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc"
+    "build": "tsc && web-ext build --overwrite-dest"
   },
   "author": "ile-24556",
   "license": "MIT",
