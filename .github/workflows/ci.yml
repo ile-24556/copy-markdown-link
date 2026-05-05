@@ -24,21 +24,18 @@ jobs:
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
-      - name: Restore dprint cache if possible
-        uses: actions/cache@668228422ae6a00e4ad889ee87cd7109ec5666a7 # v5.0.4
-        with:
-          path: ~/.cache/dprint
-          key: ${{ runner.os }}-dprint-${{ hashFiles('dprint.jsonc') }}
-      - uses: dprint/check@9cb3a2b17a8e606d37aae341e49df3654933fc23 # v2.3
-        with:
-          args: --list-different
-
       - uses: jdx/mise-action@1648a7812b9aeae629881980618f079932869151 #v4.0.1
       - name: Restore npm cache if possible
         uses: actions/cache@668228422ae6a00e4ad889ee87cd7109ec5666a7 # v5.0.4
         with:
           path: ~/.npm
           key: ${{ runner.os }}-npm-${{ hashFiles('package-lock.json') }}
+      - name: Restore dprint cache if possible
+        uses: actions/cache@668228422ae6a00e4ad889ee87cd7109ec5666a7 # v5.0.4
+        with:
+          path: ~/.cache/dprint
+          key: ${{ runner.os }}-dprint-${{ hashFiles('dprint.jsonc') }}
+
       - run: npm ci
       - run: npm run lint
       - run: npm run build
