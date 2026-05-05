@@ -9,6 +9,16 @@
     "48": "icons/icon-48.png"
   },
 
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "copy-markdown-link@ile-24556",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    },
+    "gecko_android": {}
+  },
+
   "background": {
     "scripts": ["dist/background.js"]
   },
