@@ -36,7 +36,7 @@
     // Completeness
     "skipLibCheck": true,
 
-    "types": ["firefox-webext-browser"],
+    "types": ["firefox-webext-browser"]
   },
-  "exclude": ["eslint.config.mts"],
+  "exclude": ["eslint.config.mts"]
 }

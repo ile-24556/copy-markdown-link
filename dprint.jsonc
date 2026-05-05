@@ -1,11 +1,7 @@
 {
   "typescript": {
   },
-  "json": {
-    "jsonTrailingCommaFiles": [
-      "tsconfig.json",
-    ],
-  },
+  "json": {},
   "markdown": {},
   "markup": {},
   "yaml": {},
