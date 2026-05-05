@@ -34,7 +34,7 @@
       "96": "icons/icon-96.png"
     },
     "show_matches": ["http://*/*", "https://*/*"],
-    "default_title": "Copy"
+    "default_title": "Copy Markdown link"
   },
 
   "permissions": [
