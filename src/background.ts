@@ -19,8 +19,16 @@ browser.pageAction.onClicked.addListener(async (tab: browser.tabs.Tab) => {
   const message: MessageReq = { action: "extractCanonicalURL" };
   const response: MessageRes = await browser.tabs.sendMessage(tab.id, message);
 
-  const url = response.url ? `${response.url}${(new URL(tab.url).hash)}` : tab.url;
-  const link = `[${tab.title}](${url})`;
+  const link = `[${tab.title}](${decideURL(response.url, tab.url)})`;
   await navigator.clipboard.writeText(link);
   console.log("Link has been copied:", link);
 });
+
+function decideURL(canonicalURL: string | null, tabURL: string): string {
+  const tabURL_ = new URL(tabURL);
+  if (canonicalURL == null) {
+    return tabURL_.href;
+  } else {
+    return `${canonicalURL}${tabURL_.hash}`;
+  }
+}
