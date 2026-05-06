@@ -1,4 +1,5 @@
 {
+  "include": ["./src"],
   "compilerOptions": {
     // Language and Environment
     "target": "es2024",
@@ -37,9 +38,5 @@
     "skipLibCheck": true,
 
     "types": ["firefox-webext-browser"]
-  },
-  "exclude": [
-    "eslint.config.mts",
-    "web-ext-artifacts"
-  ]
+  }
 }
