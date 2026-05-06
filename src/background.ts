@@ -27,6 +27,7 @@ browser.pageAction.onClicked.addListener(async (tab: browser.tabs.Tab) => {
 function decideURL(canonicalURL: string | null, tabURL: string): string {
   const tabURL_ = new URL(tabURL);
   if (canonicalURL == null) {
+    tabURL_.search = "";
     return tabURL_.href;
   } else {
     return `${canonicalURL}${tabURL_.hash}`;
