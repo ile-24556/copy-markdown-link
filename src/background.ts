@@ -24,12 +24,12 @@ browser.pageAction.onClicked.addListener(async (tab: browser.tabs.Tab) => {
   console.log("Link has been copied:", link);
 });
 
-function decideURL(canonicalURL: string | null, tabURL: string): string {
-  const tabURL_ = new URL(tabURL);
-  if (canonicalURL == null) {
-    tabURL_.search = "";
-    return tabURL_.href;
+function decideURL(canonicalURLString: string | null, tabURLString: string): string {
+  const tabURL = new URL(tabURLString);
+  if (canonicalURLString == null) {
+    tabURL.search = "";
+    return tabURL.href;
   } else {
-    return `${canonicalURL}${tabURL_.hash}`;
+    return `${canonicalURLString}${tabURL.hash}`;
   }
 }
