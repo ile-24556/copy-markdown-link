@@ -29,7 +29,12 @@ function decideURL(canonicalURLString: string | null, tabURLString: string): str
   if (canonicalURLString == null) {
     tabURL.search = "";
     return tabURL.href;
-  } else {
-    return `${canonicalURLString}${tabURL.hash}`;
   }
+
+  const canonicalURL = new URL(canonicalURLString);
+  if (canonicalURL.hash !== "") {
+    return canonicalURL.href;
+  }
+  canonicalURL.hash = tabURL.hash;
+  return canonicalURL.href;
 }
