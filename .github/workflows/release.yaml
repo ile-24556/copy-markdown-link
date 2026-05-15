@@ -32,6 +32,7 @@ jobs:
           convert icon-16.png -sample  200%  icon-32.png
           convert icon-16.png -sample  300%  icon-48.png
           convert icon-16.png -sample  600%  icon-96.png
+          convert icon-16.png -sample 1600% icon-128.png
 
       - name: Restore npm cache if possible
         uses: actions/cache@668228422ae6a00e4ad889ee87cd7109ec5666a7 # v5.0.4
