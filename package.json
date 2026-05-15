@@ -6,7 +6,7 @@
   "scripts": {
     "format": "dprint fmt",
     "build:assets": "tsc && ./scripts/generate_bigger_icons.sh",
-    "lint": "dprint check && eslint src eslint.config.* && npm run build:assets && web-ext lint --ignore-files scripts",
+    "lint": "dprint check && eslint && npm run build:assets && web-ext lint --ignore-files scripts",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm run build:assets && web-ext build --ignore-files scripts --overwrite-dest"
   },
