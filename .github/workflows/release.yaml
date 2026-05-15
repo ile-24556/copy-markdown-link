@@ -21,6 +21,16 @@ jobs:
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
+      - name: Validate version numbers
+        run: |
+          tag="${GITHUB_REF#refs/tags/}"
+          manifest_version="$(jq --raw-output '.version' 'manifest.json')"
+          package_version="$(jq --raw-output '.version' 'package.json')"
+          if ! [[ "$tag" == "$manifest_version" && "$tag" == "$package_version" ]]; then
+            echo 'Version numbers should match.' >&2
+            exit 1
+          fi
+
       - name: Install ImageMagick
         run: |
           sudo apt install --update -y imagemagick
