@@ -5,9 +5,10 @@
   "main": "background.js",
   "scripts": {
     "format": "dprint fmt",
-    "lint": "dprint check && eslint src eslint.config.* && tsc && web-ext lint",
+    "build:assets": "tsc && ./scripts/generate_bigger_icons.sh",
+    "lint": "dprint check && eslint src eslint.config.* && npm run build:assets && web-ext lint",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc && web-ext build --overwrite-dest"
+    "build": "npm run build:assets && web-ext build --overwrite-dest"
   },
   "author": "ile-24556",
   "license": "MIT",

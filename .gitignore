@@ -1,3 +1,6 @@
 /dist/
 /node_modules/
 /web-ext-artifacts/
+
+/icons/*
+!/icons/icon-16.png
