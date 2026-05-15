@@ -4,6 +4,7 @@
   "description": "Copy the Markdown link of current page.",
   "main": "background.js",
   "scripts": {
+    "format": "dprint fmt",
     "lint": "dprint check && eslint src eslint.config.* && tsc && web-ext lint",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc && web-ext build --overwrite-dest"
