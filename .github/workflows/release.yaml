@@ -31,18 +31,9 @@ jobs:
             exit 1
           fi
 
-      - name: Install ImageMagick
-        run: |
-          sudo apt install --update -y imagemagick
-      - name: Install oxipng
-        env:
+      - env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          cd "$(mktemp -d)"
-          gh release download -R oxipng/oxipng -p 'oxipng-*.*.*-x86_64-unknown-linux-gnu.tar.gz'
-          tar -xf oxipng-*.*.*-x86_64-unknown-linux-gnu.tar.gz --strip-components 1
-          mkdir -p ~/.local/bin
-          mv oxipng ~/.local/bin
+        run: scripts/install_imagemagick_and_oxipng.sh
 
       - name: Restore npm cache if possible
         uses: actions/cache@668228422ae6a00e4ad889ee87cd7109ec5666a7 # v5.0.4

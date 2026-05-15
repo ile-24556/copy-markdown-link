@@ -24,6 +24,10 @@ jobs:
     steps:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
+      - env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: scripts/install_imagemagick_and_oxipng.sh
+
       - name: Restore npm cache if possible
         uses: actions/cache@668228422ae6a00e4ad889ee87cd7109ec5666a7 # v5.0.4
         with:
