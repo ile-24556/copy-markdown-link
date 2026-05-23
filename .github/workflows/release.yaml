@@ -6,7 +6,9 @@ on:
       - "*"
   workflow_dispatch:
 permissions:
+  attestations: write
   contents: write
+  id-token: write
 defaults:
   run:
     shell: bash --noprofile --norc -euxo pipefail {0}
