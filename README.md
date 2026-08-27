@@ -6,6 +6,7 @@ Features:
 
 - It extracts canonical URLs if available.
 - Search queries are removed. Hash identifiers are retained.
+- It works on desktop and Android.
 
 Source code is hosted on GitHub: [ile-24556/copy-markdown-link]
 
