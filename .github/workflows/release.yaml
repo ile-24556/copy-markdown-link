@@ -63,5 +63,5 @@ jobs:
           readonly tag="${GITHUB_REF#refs/tags/}"
           gh release create \
             "$tag" --title="$tag" \
-            --fail-on-no-commits --generate-notes \
-            web-ext-artifacts/copy_markdown_link-*.*.*.zip
+            --draft --fail-on-no-commits --generate-notes --verify-tag \
+            -- web-ext-artifacts/copy_markdown_link-*.*.*.zip
